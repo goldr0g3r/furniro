@@ -1,0 +1,14 @@
+// base
+@import "./base/colors.scss";
+@import "./base/typography.scss";
+// utilities
+@import "./utilities/functions.scss";
+@import "./utilities/mixins.scss";
+@import "./utilities/variables.scss";
+
+// reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

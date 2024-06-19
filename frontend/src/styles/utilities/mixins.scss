@@ -1,0 +1,18 @@
+// breakpoint mixin scss
+@mixin breakpoint($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media (max-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint #{$name} does not exist in $breakpoints";
+  }
+}
+// z-index mixin scss
+@mixin z-index($name) {
+  @if map-has-key($z-index, $name) {
+    z-index: map-get($z-index, $name);
+  } @else {
+    @warn "Z-index #{$name} does not exist in $z-index";
+  }
+}

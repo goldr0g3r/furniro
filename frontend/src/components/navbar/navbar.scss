@@ -1,0 +1,94 @@
+@import "../../styles/index.scss";
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+padding: 1rem ;
+
+  .navbar_left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-inline: 2rem;
+    .logo_img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .logo_text {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+  .navbar_middle {
+    width: 50%;
+    margin-inline: 5rem;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 75px;
+      list-style: none;
+      li {
+        a {
+          text-decoration: none;
+          color: $heading;
+          font-size: 16px;
+          font-weight: medium;
+          transition: all 0.3s ease;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  .navbar_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 20%;
+    svg {
+      width: 20px;
+    }
+  }
+
+  @include breakpoint(md) {
+    .navbar_left {
+      margin-inline: 1rem;
+    }
+    .navbar_middle {
+      margin-inline: 2rem;
+    }
+    .navbar_right {
+      width: 30%;
+    }
+  }
+
+  @include breakpoint(sm) {
+    .navbar_left {
+      margin-inline: 0.5rem;
+    }
+    .navbar_middle {
+      margin-inline: 1rem;
+    }
+    .navbar_right {
+      width: 40%;
+    }
+  }
+
+  @include breakpoint(xs) {
+    .navbar_left {
+      margin-inline: 0.5rem;
+    }
+    .navbar_middle {
+      margin-inline: 1rem;
+    }
+    .navbar_right {
+      width: 50%;
+    }
+  }
+}
