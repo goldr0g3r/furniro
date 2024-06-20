@@ -32,10 +32,18 @@ const Navbar = (props: Props) => {
         </ul>
       </div>
       <div className="navbar_right">
-        <UserIcon />
-        <SearchIcon />
-        <HeartIcon />
-        <CartIcon />
+        <button>
+          <UserIcon />
+        </button>
+        <button>
+          <SearchIcon />
+        </button>
+        <button>
+          <HeartIcon />
+        </button>
+        <button>
+          <CartIcon />
+        </button>
       </div>
     </nav>
   );
