@@ -1,5 +1,8 @@
 // breakpoints function saas
-@function bp($breakpoint) {
-  @return map-get($breakpoints, $breakpoint);
+@function breakpointFunction($minbreakpoint, $maxbreakpoint) {
+  @if $maxbreakpoint == null {
+    @return (max-width: $minbreakpoint);
+  } @else {
+    @return (min-width: $minbreakpoint) and (max-width: $maxbreakpoint);
+  }
 }
-

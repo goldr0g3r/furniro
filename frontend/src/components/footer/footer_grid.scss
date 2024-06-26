@@ -104,11 +104,24 @@
     }
   }
 
-  @include breakpoint(0, sm) {
-    grid-template-columns: 0.5fr 0.5fr;
+  @media screen and (max-width: 576px) {
+    // grid-template-columns: 1fr;
+    // row-gap: 1rem;
+    // padding: 1rem;
+    // padding-inline: 1rem;
+    // order: 4;
+    // margin: auto;
+    // place-content: center;
+    // text-align: center;
+    display: none;
   }
 }
 
+.newsletter_heading {
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
+}
 .footer_copyright {
   margin-inline: 2rem;
 }

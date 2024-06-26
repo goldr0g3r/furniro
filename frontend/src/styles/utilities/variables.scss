@@ -1,5 +1,14 @@
 // breakpoint variables
-$breakpoints: (
+
+$maxbreakpoints: (
+  xs: 575px,
+  sm: 767px,
+  md: 991px,
+  lg: 1199px,
+  xl: 1399px,
+);
+
+$minbreakpoints: (
   xs: 576px,
   sm: 768px,
   md: 992px,

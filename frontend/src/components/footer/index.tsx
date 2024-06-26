@@ -25,7 +25,7 @@ const Footer = (props: Props) => {
             <a href="policy/">Privacy Policies</a>
           </div>
           <div>
-            <h3>Newsletter</h3>
+            <h3 className="newsletter_heading">Newsletter</h3>
             <div className="newsletter_form">
               <input
                 type="email"

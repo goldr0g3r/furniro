@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   height: 100vh;
 
-  @media (min-width: 0px) and (max-width: 600px) {
+  @media (max-width: 600px) {
     height: 60vh;
   }
 }
@@ -55,7 +55,7 @@
   }
 
   // for mobile
-  @media (min-width: 0px) and (max-width: 600px) {
+  @media (max-width: 600px) {
     width: 300px;
     height: 300px;
     position: relative;
