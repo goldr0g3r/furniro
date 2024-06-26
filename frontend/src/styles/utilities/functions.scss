@@ -1,8 +1,1 @@
-// breakpoints function saas
-@function breakpointFunction($minbreakpoint, $maxbreakpoint) {
-  @if $maxbreakpoint == null {
-    @return (max-width: $minbreakpoint);
-  } @else {
-    @return (min-width: $minbreakpoint) and (max-width: $maxbreakpoint);
-  }
-}
+

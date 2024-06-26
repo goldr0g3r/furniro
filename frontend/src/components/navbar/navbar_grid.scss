@@ -1,0 +1,94 @@
+@import "../../styles/index.scss";
+@import "../../styles/utilities/variables.scss";
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  place-items: center;
+  padding: 15px 20px 15px 20px;
+  justify-items: center;
+  font-weight: 600;
+
+  .navbar_left {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    .logo_img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .logo_text {
+      font-family: $font-family;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  .navbar_middle {
+    ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: unset;
+    }
+
+    a {
+      text-decoration: none;
+      color: $heading;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .navbar_right {
+    color: $heading;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    svg {
+      width: 20px;
+    }
+    button {
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .mobile_menu {
+    svg {
+      width: 30px;
+      stroke-width: 2px;
+    }
+
+    button {
+      border: none;
+      background-color: $white;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    @media screen and (min-width: 577px) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .navbar_right {
+      display: none;
+    }
+    .navbar_middle {
+      display: none;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2rem;
+  }
+}

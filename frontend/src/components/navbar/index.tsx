@@ -1,10 +1,11 @@
 import React from "react";
-import "./navbar.scss";
+import "./navbar_grid.scss";
 import site_logo from "../../assets/logo";
 import SearchIcon from "../../assets/icons/search";
 import UserIcon from "../../assets/icons/user";
 import HeartIcon from "../../assets/heart";
 import CartIcon from "../../assets/icons/cart";
+import MenuIcon from "../../assets/icons/menu";
 
 type Props = {};
 
@@ -43,6 +44,20 @@ const Navbar = (props: Props) => {
         </button>
         <button>
           <CartIcon />
+        </button>
+      </div>
+
+      <div className="mobile_menu">
+        <button
+          onClick={() => {
+            const menu = document.querySelector(".navbar_middle ul");
+            console.log(menu?.classList);
+            if (menu) {
+              menu.classList.toggle("show_menu");
+            }
+          }}
+        >
+          <MenuIcon />
         </button>
       </div>
     </nav>
