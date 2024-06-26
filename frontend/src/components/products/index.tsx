@@ -19,7 +19,7 @@ const ProductSection = (props: Props) => {
             <img src={product.image} alt={product.name} />
             <h2>{product.name}</h2>
             <p>{product.description}</p>
-            <h3>{product.price}</h3>
+            <h3>₹{product.price}</h3>
           </div>
         ))}
       </div>
@@ -28,18 +28,24 @@ const ProductSection = (props: Props) => {
         className="button"
         onClick={() => {
           console.log("Show More");
-          Products.slice(8, 10).map((product) => (
+          const data = Products.slice(8, 10).map((product) => (
             <div key={product.id} className="product">
-              <img src={product.image} alt={product.name} />
+              <img
+                src="https://th.bing.com/th/id/OIP.DgouwyI_lkxkxAJkqYk_EwHaHa?w=174&h=180&c=7&r=0&o=5&pid=1.7"
+                alt={product.name}
+              />
               <h2>{product.name}</h2>
               <p>{product.description}</p>
               <h3>{product.price}</h3>
             </div>
           ));
+          console.log(data);
+          return data;
         }}
       >
         Show More
       </button>
+      <div></div>
     </section>
   );
 };

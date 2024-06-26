@@ -54,16 +54,17 @@
     cursor: pointer;
   }
 
-  // for mobile
-  @media (max-width: 600px) {
+  // for mobile and tablet
+  @media (max-width: 900px) {
     width: 300px;
     height: 300px;
     position: relative;
     background: #fff3e3e0;
-    top: 0;
+    top: 25%;
     left: 0;
     margin: 0;
     padding-inline: 2rem;
+    margin-inline: 2rem;
     width: auto;
     h1 {
       font-size: 1.5rem;

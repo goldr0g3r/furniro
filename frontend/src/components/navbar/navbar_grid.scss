@@ -75,20 +75,34 @@
       }
     }
 
-    @media screen and (min-width: 577px) {
+    // for mobile and tablet
+    @media screen and (min-width: 768px) {
       display: none;
     }
   }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     .navbar_right {
       display: none;
     }
-    .navbar_middle {
-      display: none;
-    }
+    // .navbar_middle {
+    //   display: none;
+    // }
 
     display: flex;
     justify-content: space-between;
     padding-inline: 2rem;
+
+    .menu_items {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background-color: hsla(0, 0%, 6%, 0.2);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      width: 80%;
+      height: 100%;
+      padding: 6rem 3rem 0;
+      transition: right 0.4s;
+    }
   }
 }
