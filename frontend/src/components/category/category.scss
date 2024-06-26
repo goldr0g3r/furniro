@@ -31,7 +31,7 @@
     text-align: center;
     }
 
-    @include breakpoint(md){
+    @include breakpoint(sm, md){
         // align center
         justify-content: space-around;
         align-items: center;

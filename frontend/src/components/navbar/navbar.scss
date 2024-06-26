@@ -76,7 +76,7 @@
     }
   }
 
-  @include breakpoint(md) {
+  @include breakpoint(sm, md) {
     .navbar_left {
       margin-inline: 1rem;
     }
@@ -88,7 +88,7 @@
     }
   }
 
-  @include breakpoint(sm) {
+  @include breakpoint(0, sm) {
     .navbar_left {
       margin-inline: 0.5rem;
     }
@@ -100,7 +100,7 @@
     }
   }
 
-  @include breakpoint(xs) {
+  @include breakpoint(0, xs) {
     .navbar_left {
       margin-inline: 0.5rem;
     }

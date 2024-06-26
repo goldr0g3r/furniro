@@ -3,8 +3,8 @@
 
 // breakpoints
 
-@mixin breakpoint($breakpoint) {
-  @media (max-width: map-get($breakpoints, $breakpoint)) {
+@mixin breakpoint($minbreakpoint, $maxbreakpoint) {
+  @media (min-width: $minbreakpoint) and (max-width: $maxbreakpoint) {
     @content;
   }
 }
