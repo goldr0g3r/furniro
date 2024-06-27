@@ -23,12 +23,11 @@
     }
   }
 
-  .navbar_middle {
+  .menu_links {
     ul {
-      list-style: none;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: unset;
+      list-style: none;
     }
 
     a {
@@ -40,7 +39,6 @@
       }
     }
   }
-
   .navbar_right {
     color: $heading;
     display: grid;
@@ -60,7 +58,7 @@
     }
   }
 
-  .mobile_menu {
+  .mobile_menu_toggle {
     svg {
       width: 30px;
       stroke-width: 2px;
@@ -84,25 +82,54 @@
     .navbar_right {
       display: none;
     }
-    // .navbar_middle {
-    //   display: none;
-    // }
+    .navbar_middle {
+      display: none;
+    }
 
     display: flex;
     justify-content: space-between;
     padding-inline: 2rem;
 
-    .menu_items {
+    .mobile_menu_hidden {
+      display: none;
+    }
+
+    .mobile_menu_en {
       position: fixed;
-      top: 0;
-      right: -100%;
-      background-color: hsla(0, 0%, 6%, 0.2);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      width: 80%;
-      height: 100%;
-      padding: 6rem 3rem 0;
-      transition: right 0.4s;
+      width: 100%;
+      height: 100vh;
+      top: 0px;
+      left: 0;
+      z-index: 10;
+      // make slide in from right
+      //transform: translateX(100%);
+      //transition: 0.3s ease-in-out;
+      background-color: $secondary;
+
+      svg {
+        position: absolute;
+        width: 60px;
+        margin: 1rem;
+        stroke-width: 2px;
+        left: 85%;
+      }
+      ul {
+        margin: 4rem;
+        list-style: none;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: auto;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 2.5rem;
+        color: $heading;
+        font-weight: 700;
+        &:hover {
+          color: $primary;
+        }
+      }
     }
   }
 }

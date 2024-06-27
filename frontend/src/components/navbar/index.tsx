@@ -6,6 +6,7 @@ import UserIcon from "../../assets/icons/user";
 import HeartIcon from "../../assets/heart";
 import CartIcon from "../../assets/icons/cart";
 import MenuIcon from "../../assets/icons/menu";
+import CloseIcon from "../../assets/icons/close";
 
 type Props = {};
 
@@ -43,7 +44,7 @@ const Navbar = (props: Props) => {
     return menuItems.map((item, index) => {
       return (
         <li key={index}>
-          <a href={item.url} onClick={closeMenu}>
+          <a href={item.url} onClick={closeMenu} className="navbar_link">
             {item.name}
           </a>
         </li>
@@ -57,21 +58,10 @@ const Navbar = (props: Props) => {
         <img src={site_logo} alt="logo" className="logo_img" />
         <span className="logo_text">Furniro</span>
       </div>
-      <div className="navbar_middle nav_menu_items">
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="shop/">Shop</a>
-          </li>
-          <li>
-            <a href="about/">About</a>
-          </li>
-          <li>
-            <a href="contact">Contact</a>
-          </li>
-        </ul>
+      <div className="navbar_middle">
+        <div className="menu_links">
+          <ul>{renderMenuItems()}</ul>
+        </div>
       </div>
       <div className="navbar_right">
         <button>
@@ -88,17 +78,21 @@ const Navbar = (props: Props) => {
         </button>
       </div>
 
-      <div className="mobile_menu">
-        <button
-          onClick={toggleMenu }
-        >
-          <MenuIcon />
+      <div className="mobile_menu_toggle">
+        <button onClick={toggleMenu}>
+          {showMenu ? (
+            <div
+              className={`${
+                showMenu ? "mobile_menu_en" : "mobile_menu_hidden"
+              }`}
+            >
+              <CloseIcon />
+              <ul>{renderMenuItems()}</ul>
+            </div>
+          ) : (
+            <MenuIcon />
+          )}
         </button>
-        <div className="menu_items">
-          <ul>{renderMenuItems()
-          
-          }</ul>
-        </div>
       </div>
     </nav>
   );
