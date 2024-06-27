@@ -86,8 +86,24 @@ const Navbar = (props: Props) => {
                 showMenu ? "mobile_menu_en" : "mobile_menu_hidden"
               }`}
             >
-              <CloseIcon />
+              <div className="close_icon">
+                <CloseIcon />
+              </div>
               <ul>{renderMenuItems()}</ul>
+              <div className="menu_icon_link">
+                <button className="button">
+                  <UserIcon />
+                </button>
+                <button className="button">
+                  <SearchIcon />
+                </button>
+                <button className="button">
+                  <HeartIcon />
+                </button>
+                <button className="button">
+                  <CartIcon />
+                </button>
+              </div>
             </div>
           ) : (
             <MenuIcon />
